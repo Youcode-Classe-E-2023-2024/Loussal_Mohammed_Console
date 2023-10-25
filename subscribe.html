@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----
+      - css link
+      --->
+    <link rel="stylesheet" href="style.css">
+    <title>subscribe</title>
+</head>
+<body>
+
+    <section class="subscription-section">
+
+        <h2 class="subscribe-headline">Our Subscriptions</h2>
+        <div class="btn-income">
+            <button class="btn-yearly" btn-yearly>Yearly</button>
+            <button class="btn-monthly selected" btn-monthly>Monthly</button>
+        </div>
+        <div class="subscription">
+                <div class="subscription-card-1">
+                    <h2 class="subscription-type">standard</h2>
+                    <ul class="sub-type-info">
+                        <li class="first-list">
+                            <h3>$ 10/m</h3>
+                            <h3>includes</h3>
+                            <p>three categories</p>
+                            <p>3 Magazines/Day</p>
+                            <h3>audio Mode</h3>
+                            <p>Not Available</p>
+                            <button type="submit" class="standard-btn">Select Plan</button>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="subscription-card-2">
+                    <h2 class="subscription-type">advanced</h2>
+                    <ul class="sub-type-info">
+                        <li class="second-list">
+                            <h3>$ 30/m</h3>
+                            <h3>includes</h3>
+                            <p>six categories</p>
+                            <p>6 Magazines/Day</p>
+                            <h3>audio Mode</h3>
+                            <p>Not Available</p>
+                            <button type="submit" class="standard-btn">Select Plan</button>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="subscription-card-3">
+                    <h2 class="subscription-type">perfectly</h2>
+                    <ul class="sub-type-info">
+                        <li class="third-list">
+                            <h3>$ 60/m</h3>
+                            <h3>includes</h3>
+                            <p>nine categories</p>
+                            <p>9 Magazines/Day</p>
+                            <h3>audio Mode</h3>
+                            <p>Available</p>
+                            <button type="submit" class="standard-btn">Select Plan</button>
+                        </li>
+                    </ul> 
+                </div>
+        </div>
+    </section>
+    <script src="js/script.js">
+        
+        /**
+         * INCOME CHANGE YEARLY / MONTHLY
+         */
+            
+        const yearly = document.querySelector("[btn-yearly]");
+        const monthly = document.querySelector("[btn-monthly]");
+            
+        const changeIncomeType = function() {
+          yearly.classList.add("selected");
+          monthly.classList.remove("selected");
+        }
+        
+        yearly.addEventListener("click", changeIncomeType);
+    </script>
+</body>
+</html>
